@@ -1,0 +1,265 @@
+<p>
+    <mat-toolbar class="menu_header" color="primary">
+        <a mat-button href="/home"><img [src]="imagenBarra" alt="" width="150px"> </a>
+        <span class="linea-vertical-izq"></span>
+        <span class="spacer"></span>
+        <a mat-button href="/home" class="boton-menu">InvitaCard</a>
+        <! --iconos de redes sociales -->
+            <a class="icon-rss" mat-icon-button href="https://www.facebook.com/" target="_blank">
+                <img src="../../../assets/icons/facebook.png" alt="facebook">
+            </a>
+            <a class="icon-rss" mat-icon-button href="https://www.instagram.com" target="_blank">
+                <img src="../../../assets/icons/instagram.png" alt="instagram">
+            </a>
+            <a class="icon-rss" mat-icon-button href="https://tik-tok" target="_blank">
+                <img src="../../../assets/icons/tik-tok.png" alt="tik-tok">
+            </a>
+            <a class="icon-rss" mat-icon-button href="https://www.youtube.com" target="_blank">
+                <img src="../../../assets/icons/youtube.png" alt="youtube">
+            </a>
+            <span class="example-spacer"></span>
+            <a mat-flat-button class="login">Iniciar sesión</a>
+            <span class="linea-vertical-der"></span>
+            <a mat-button class="sign-in">Registrarse</a>
+    </mat-toolbar>
+</p>
+<!-- Separacion -->
+
+<div class="card-home">
+    <div class="container-principal">
+        <div class="titulo">
+            <mat-card-title>Crea invitaciones únicas para cualquier ocasión</mat-card-title>
+            <mat-card-subtitle>¡La mejor opción para grandes y pequeños eventos!</mat-card-subtitle>
+            <a mat-button class="button-crear"><mat-icon>add</mat-icon> Crear</a>
+        </div>
+        <div class="img-home">
+            <img src="../../../assets/images/imagen-home.png" alt="tarjeta">
+        </div>
+    </div>
+    <div class="check-card">
+        <div class="card-container">
+            <mat-card class="info-card">
+                <div class="card-content">
+                    <mat-icon class="check-icon">check_circle</mat-icon>
+                    <span class="card-description">Crea invitaciones impresionantes y personalizadas en
+                        minutos.</span>
+                </div>
+            </mat-card>
+            <mat-card class="info-card">
+                <div class="card-content">
+                    <mat-icon class="check-icon">check_circle</mat-icon>
+                    <span class="card-description">Personaliza el diseño con tus colores y estilos
+                        favoritos.</span>
+                </div>
+            </mat-card>
+            <mat-card class="info-card">
+                <div class="card-content">
+                    <mat-icon class="check-icon">check_circle</mat-icon>
+                    <span class="card-description">Comparte tus invitaciones a través de email y redes
+                        sociales.</span>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<!-- Separacion -->
+<div class="segundo_scroll">
+    <div class="container-scroll-header">
+        <div class="titulo-scroll">
+            <mat-card-title class="titulo-scroll">Facil de editar</mat-card-title>
+            <mat-card-subtitle class="subtitulo-scroll">Plantillas de invitaciones</mat-card-subtitle>
+        </div>
+        <div class="descripcion-scroll">
+            <mat-card-content class="titulo-scroll">Crea tus propias tarjetas de invitación que a tus destinatarios
+                les encantarán, comenzando con una plantilla diseñada profesionalmente. Tenemos invitaciones en
+                blanco, invitación para boda, invitaciones para bautizo, invitaciones de primera comunión,
+                invitaciones de despedida de soltera, invitaciones navideñas y mucho más. Explora nuestras opciones
+                de plantillas a continuación.
+            </mat-card-content>
+        </div>
+    </div>
+    <div class="carrusel">
+        <mat-card class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-track" [style.transform]="getTransform()">
+                    <!-- Duplicar la última imagen al inicio -->
+                    <div class="carousel-slide" [class.current]="currentIndex === 0"
+                        [class.previous]="currentIndex === totalImages - 1" [class.next]="currentIndex === 1">
+                        <img [src]="images[totalImages - 1]" alt="carousel image">
+                    </div>
+                    <div class="carousel-slide" *ngFor="let image of images; let i = index"
+                        [class.current]="currentIndex === i + 1" [class.previous]="currentIndex === i"
+                        [class.next]="currentIndex === (i + 2) % totalImages">
+                        <img [src]="image" alt="carousel image">
+                    </div>
+                    <!-- Duplicar la primera imagen al final -->
+                    <div class="carousel-slide" [class.current]="currentIndex === totalImages + 1"
+                        [class.previous]="currentIndex === totalImages" [class.next]="currentIndex === 0">
+                        <img [src]="images[0]" alt="carousel image">
+                    </div>
+                </div>
+            </div>
+            <!-- Botones de navegación -->
+            <div class="arrow arrow-left" (click)="previousSlide()">&#10094;</div>
+            <div class="arrow arrow-right" (click)="nextSlide()">&#10095;</div>
+        </mat-card>
+    </div>
+    <div class="button-container">
+        <a mat-button class="button-crear2"><mat-icon>add</mat-icon> Crear</a>
+        <a mat-button class="button-ver-plantillas">Ver más plantillas</a>
+    </div>
+</div>
+<!-- Separacion -->
+<div class="tercer_scroll">
+    <div class="container-scroll-header">
+        <div class="titulo-scroll">
+            <mat-card-title class="titulo-scroll">Plantillas Destacadas</mat-card-title>
+        </div>
+    </div>
+    <div class="carrusel">
+        <mat-card class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-track" [style.transform]="getTransform()">
+                    <!-- Duplicar la última imagen al inicio -->
+                    <div class="carousel-slide" [class.current]="currentIndex === 0"
+                        [class.previous]="currentIndex === totalImages - 1" [class.next]="currentIndex === 1">
+                        <img [src]="images[totalImages - 1]" alt="carousel image">
+                    </div>
+                    <div class="carousel-slide" *ngFor="let image of images; let i = index"
+                        [class.current]="currentIndex === i + 1" [class.previous]="currentIndex === i"
+                        [class.next]="currentIndex === (i + 2) % totalImages">
+                        <img [src]="image" alt="carousel image">
+                    </div>
+                    <!-- Duplicar la primera imagen al final -->
+                    <div class="carousel-slide" [class.current]="currentIndex === totalImages + 1"
+                        [class.previous]="currentIndex === totalImages" [class.next]="currentIndex === 0">
+                        <img [src]="images[0]" alt="carousel image">
+                    </div>
+                </div>
+            </div>
+            <!-- Botones de navegación -->
+            <div class="arrow arrow-left" (click)="previousSlide()">&#10094;</div>
+            <div class="arrow arrow-right" (click)="nextSlide()">&#10095;</div>
+        </mat-card>
+    </div>
+    <div class="button-container">
+        <!-- crea 4 botones, el primero llamado elige tu diseño, el segundo personaliza, el tercero comparte y el ultimo descarga, cada uno unido por uuna flecha-->
+        <a mat-button class="button-diseño">Elige tu diseño</a>
+        <div class="arrow-explicacion">➡️</div>
+        <a mat-button class="button-personaliza">Personaliza</a>
+        <div class="arrow-explicacion">➡️</div>
+        <a mat-button class="button-comparte">Comparte</a>
+        <div class="arrow-explicacion">➡️</div>
+        <a mat-button class="button-descarga">Descarga</a>
+
+
+    </div>
+    <section class="testimonials">
+        <h2>Lo que dicen nuestros usuarios</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"¡Fue muy fácil crear mis invitaciones! La variedad de diseños me encantó."
+                </p>
+                <p class="testimonial-author">- María G.</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"La personalización es increíble, ¡y mis amigos quedaron impresionados!"</p>
+                <p class="testimonial-author">- Juan P.</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"El proceso de descarga fue rápido y sencillo. ¡Recomiendo esta plataforma!"
+                </p>
+                <p class="testimonial-author">- Ana L.</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"¡Me encanta la facilidad con la que puedo compartir mis invitaciones!"</p>
+                <p class="testimonial-author">- Carlos R.</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+<!-- Separacion -->
+<div class="cuarto-scroll">
+
+    <section class="contact-request">
+        <div class="request-header">
+            <h2>¿No encontraste el personaje o modelo que buscabas?</h2>
+            <p>¡Estamos aquí para ayudarte! Completa el siguiente formulario con tus peticiones y nos pondremos en
+                contacto contigo.</p>
+        </div>
+
+        <form class="request-form">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="Ingresa tu correo electrónico">
+            </div>
+            <div class="form-group">
+                <label for="message">Tu Solicitud:</label>
+                <textarea id="message" name="message" rows="4" required
+                    placeholder="Escribe tu solicitud aquí..."></textarea>
+            </div>
+            <button type="submit" class="submit-button">Enviar Solicitud</button>
+        </form>
+    </section>
+
+</div>
+<section class="faq-section">
+    <h2>Preguntas Frecuentes</h2>
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let faq of faqs">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{ faq.question }}
+                </mat-panel-title>
+                <mat-panel-description>
+                    Haz clic para ver la respuesta.
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p class="respuesta">{{ faq.answer }}</p>
+        </mat-expansion-panel>
+    </mat-accordion>
+</section>
+
+
+<!-- Separacion -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <h3>InvitaCard</h3>
+            <p>Creando invitaciones únicas para cada ocasión. Nos apasiona ayudar a nuestros usuarios a hacer sus
+                eventos inolvidables.</p>
+            <p>© 2024 InvitaCard. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+                <li><a href="/home">Inicio</a></li>
+                <li><a href="/plantillas">Plantillas</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="/faq">Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h4>Síguenos en Redes Sociales</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="../../../assets/icons/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../../../assets/icons/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.tik-tok.com" target="_blank">
+                    <img src="../../../assets/icons/tik-tok.png" alt="TikTok">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="../../../assets/icons/youtube.png" alt="YouTube">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
