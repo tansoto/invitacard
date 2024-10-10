@@ -50,9 +50,10 @@ img {
 }
 
 .menu_header {
-    background-color: #0f8fe4 !important;
+    background-color: #1A5276 !important;
 }
-
+/* hasta aqui estan las clases de la barra de navegacion */
+/* desde aqui estan las clases de la pagina principal */
 .mdc-card {
     display: flex;
     /* flex-direction: column; */
@@ -144,6 +145,8 @@ img {
     font-size: 16px; /* Tamaño del texto */
     color: #333; /* Color del texto */
 }
+/* hasta aqui estan las clases de la pagina principal */
+/* desde aqui estan las clases de la pagina de plantillas */
 .container-scroll-header{
     display: flex;
 }
@@ -234,7 +237,7 @@ img {
 
 .button-crear2,
 .button-ver-plantillas {
-    background-color: #4aacd3;  /* Color de fondo */
+    background-color: #1A5276;  /* Color de fondo */
     color: rgb(255, 255, 255) !important;                /* Color del texto */
     border-radius: 15px;         /* Bordes redondeados */
     padding: 10px 20px;          /* Espaciado interno */
@@ -254,6 +257,8 @@ img {
 .button-ver-plantillas mat-icon {
     margin-right: 8px;          /* Espacio entre el ícono y el texto */
 }
+/* hasta aqui estan las clases de la pagina de plantillas */
+/* desde aqui estan las clases de la pagina de diseño  o tercer scroll*/
 .button-diseño,
 .button-personaliza,
 .button-comparte,
@@ -323,6 +328,8 @@ img {
     color: #555;                      /* Color del texto del autor */
     font-style: italic;               /* Estilo en cursiva */
 }
+/* hasta aqui estan las clases de la pagina de diseño  o tercer scroll*/
+/* desde aqui estan las clases de la pagina de contacto */
 .contact-request {
     background-color: #fafafa;               /* Color de fondo más claro */
     padding: 60px 30px;                      /* Espaciado interno aumentado */
@@ -401,6 +408,8 @@ textarea:focus {
     background-color: #0e3c5a;               /* Color de fondo al pasar el mouse */
     transform: translateY(-2px);            /* Efecto de elevación al pasar el mouse */
 }
+/* hasta aqui estan las clases de la pagina de contacto */
+/* desde aqui estan las clases de la pagina de faq */
 .faq-section {
     padding: 60px 20px;           /* Espaciado interno */
     background-color: #f8ffff;   /* Color de fondo suave */
@@ -450,7 +459,8 @@ mat-panel-description {
     font-size: 14px;             /* Tamaño de fuente más pequeño */
     color: #02719c;              /* Color verde para la descripción */
 }
-
+/* hasta aqui estan las clases de la pagina de faq */
+/* desde aqui estan las clases del footer */
 .footer-info p {
     padding: 15px;               /* Espacio interno para la respuesta */
     border-top: 1px solid #80deea; /* Línea entre pregunta y respuesta */
@@ -541,7 +551,8 @@ mat-panel-description {
 .social-icons img:hover {
     transform: scale(1.1);                   /* Efecto de aumento al pasar el mouse */
 }
-
+/* hasta aqui estan las clases del footer */
+/* desde aqui estan las clases del header */
 @media (max-width: 600px) {
     .boton-menu {
         /* esconder texto */
