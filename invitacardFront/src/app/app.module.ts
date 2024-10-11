@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HomeModule } from './home/home.module';
+import { AuthModule } from './auth/auth.module';
+import { OAuthModule } from 'angular-oauth2-oidc';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +15,10 @@ import { HomeModule } from './home/home.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    AuthModule,
+    OAuthModule.forRoot(),// el for root es importante para que el modulo se cargue en el app.module
+    HttpClientModule 
   ],
   providers: [
     provideAnimationsAsync()

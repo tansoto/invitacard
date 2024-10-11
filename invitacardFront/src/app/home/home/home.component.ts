@@ -1,4 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AuthGoogleService } from '../../services/auth-google.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +8,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent  {
+  constructor(private  authGoogleService: AuthGoogleService,private router:Router) { }
   faqs = [
     { 
       question: '¿Cómo puedo crear una invitación?', 
@@ -63,5 +66,12 @@ export class HomeComponent  {
   getTransform() {
     return `translateX(-${this.currentIndex * 100}%)`;
   }
-  
+  showData() {
+    const data = JSON.stringify(this.authGoogleService.getProfile());
+    console.log(data);
+  }
+  logout() { 
+    this.authGoogleService.logout();
+    this.router.navigate(['/login']);
+  } 
 }
