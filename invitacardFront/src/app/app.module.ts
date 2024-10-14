@@ -8,6 +8,7 @@ import { HomeModule } from './home/home.module';
 import { AuthModule } from './auth/auth.module';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent
@@ -17,12 +18,14 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HomeModule,
     AuthModule,
-    OAuthModule.forRoot(),// el for root es importante para que el modulo se cargue en el app.module
-    HttpClientModule 
+    OAuthModule.forRoot(), // el for root es importante para que el modulo se cargue en el app.module
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

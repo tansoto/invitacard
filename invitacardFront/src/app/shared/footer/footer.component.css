@@ -1,0 +1,90 @@
+.footer-info p {
+    padding: 15px;               /* Espacio interno para la respuesta */
+    border-top: 1px solid #80deea; /* Línea entre pregunta y respuesta */
+    border-radius: 0 0 8px 8px; /* Bordes redondeados en la parte inferior */
+    font-size: 16px;             /* Tamaño de fuente para respuestas */
+
+}
+
+.footer {
+    background-color: #1A5276;                /* Color de fondo del pie de página */
+    color: white;                             /* Color del texto */
+    padding: 40px 20px;                      /* Espaciado interno */
+    text-align: center;                       /* Centra el texto */
+}
+
+.footer-container {
+    display: flex;                            /* Flexbox para alinear los elementos */
+    flex-direction: column;                   /* Coloca los elementos en columna */
+    max-width: 1200px;                       /* Ancho máximo */
+    margin: 0 auto;                          /* Centra el contenedor */
+}
+
+.footer-info {
+    margin-bottom: 30px;                     /* Espacio debajo de la sección de información */
+}
+
+.footer-info h3 {
+    font-size: 24px;                         /* Tamaño del título */
+    margin-bottom: 10px;                     /* Espacio debajo del título */
+}
+
+.footer-info p {
+    font-size: 14px;                         /* Tamaño del texto */
+    margin: 5px 0;                           /* Margen arriba y abajo */
+}
+
+.footer-links {
+    margin-bottom: 30px;                     /* Espacio debajo de la sección de enlaces */
+}
+
+.footer-links h4 {
+    font-size: 18px;                         /* Tamaño del título */
+    margin-bottom: 10px;                     /* Espacio debajo del título */
+}
+
+.footer-links ul {
+    list-style: none;                        /* Sin viñetas en la lista */
+    padding: 0;                             /* Sin padding */
+}
+
+.footer-links li {
+    margin: 5px 0;                          /* Margen entre los elementos de la lista */
+}
+
+.footer-links a {
+    color: #e0e0e0;                          /* Color de los enlaces */
+    text-decoration: none;                   /* Sin subrayado en los enlaces */
+}
+
+.footer-links a:hover {
+    color: #fff;                             /* Color de los enlaces al pasar el mouse */
+}
+
+.footer-social {
+    margin-bottom: 20px;                     /* Espacio debajo de la sección social */
+}
+
+.footer-social h4 {
+    font-size: 18px;                         /* Tamaño del título */
+    margin-bottom: 10px;                     /* Espacio debajo del título */
+}
+
+.social-icons {
+    display: flex;                           /* Flexbox para alinear los iconos */
+    justify-content: center;                 /* Centra los iconos */
+}
+
+.social-icons a {
+    margin: 0 10px;                          /* Margen horizontal entre iconos */
+}
+
+.social-icons img {
+    width: 30px;                             /* Tamaño de los iconos */
+    height: 30px;                            /* Tamaño de los iconos */
+    transition: transform 0.3s;             /* Transición suave para efectos */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);                   /* Efecto de aumento al pasar el mouse */
+}

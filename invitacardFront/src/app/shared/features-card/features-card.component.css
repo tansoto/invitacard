@@ -1,0 +1,40 @@
+.check-card {
+    height: 20%;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin-bottom: 2%;
+    
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: space-around; /* Espacio entre las tarjetas */
+}
+
+.info-card {
+    width: 30%; /* Ajustar el ancho de cada tarjeta */
+    display: flex;
+    align-items: center; /* Centrar el contenido verticalmente */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #ffffff; /* Color de fondo de la tarjeta */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+}
+
+.card-content {
+    display: flex;
+    align-items: center; /* Centrar el contenido verticalmente */
+}
+
+.check-icon {
+    color: #03e6da; /* Color del icono */
+    font-size: 20px; /* Tamaño del icono */
+    margin-right: 10px; /* Espaciado entre icono y texto */
+}
+
+.card-description {
+    font-size: 16px; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+}

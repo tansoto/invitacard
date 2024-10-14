@@ -1,0 +1,58 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.spacer {
+    flex: 0 0 30px;
+}
+
+.linea-vertical-izq {
+    position: relative;
+    height: 60%;  /* Cambiar tamaño de línea vertical */
+    width: 1px; 
+    background-color: #ffffff; 
+    left: 15px;
+    top: 0;
+}
+
+.icon-rss {
+    padding: 3px;
+}
+
+.boton-menu {
+    font-size: 18px;
+}
+
+.login {
+    border-radius: 15px !important;
+    color: #ffffff !important;
+    border: 1px solid #03e6da!important;
+    padding: 0px !important;
+    margin: 5px;
+    background-color: #10dfb2 !important;
+    box-shadow:2px 2px 10px rgb(224, 51, 51);
+}
+
+.sign-in {
+    border-radius: 15px !important;
+    color: rgb(136, 10, 10) !important;
+    border: 1px solid #00e9f1!important;
+    padding: 0px !important;
+}
+
+a {
+    width: 130px;
+    height: 50px !important; 
+    padding: 0px;
+}
+
+img {
+    padding: 0px;
+    margin-top: 9px;
+    width: 75%;
+}
+
+.menu_header {
+    background-color: #1A5276 !important;
+}
+/* hasta aqui estan las clases de la barra de navegacion */

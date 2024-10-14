@@ -1,0 +1,88 @@
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  margin: 1%;
+}
+
+.main-image {
+  flex: 0.4;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  max-height: 400px;
+}
+
+.main-image img {
+  object-fit: contain;/* controla la relación de aspecto de la imagen osea se ajusta a la caja */
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.descripcion-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 0,0,15px,15px; /* Redondea solo las esquinas inferiores */
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con 70% de transparencia */
+  border-radius: 5px;
+  backdrop-filter: blur(5px); /* Aplica un desenfoque al fondo */
+  width: 100%;
+  height: 50px;
+}
+
+.image-list {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.image-list div {
+  margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s;
+  max-height: 100px;
+  max-width: 70px;
+  flex-direction: row;
+  cursor: pointer; /* Cambia el cursor a mano al pasar sobre el contenedor */
+}
+.image-list div .info{
+  margin-left: 10%;
+  display: block;
+  flex-direction: column;
+  width: 100%;
+}
+.info p{
+  margin-top: 0%;
+  width: 300px;
+}
+.image-list img {
+  border-radius: 15px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.image-list .active img {
+  opacity: 1;
+}
+
+.image-list .inactive img {
+  filter: blur(2px);
+  opacity: 0.5;
+}
+
+.image-list .inactive p {
+  opacity: 0.5; /* Difumina la descripción cuando la imagen no está activa */
+  transition: opacity 0.3s;
+}
+
+.image-list img {
+  max-height: 300px; /* Establece la misma altura para las imágenes de la lista */
+  object-fit: cover; /* Mantiene la proporción de las imágenes */
+}
