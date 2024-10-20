@@ -16,7 +16,7 @@ export class AuthGoogleService {
       issuer: 'https://accounts.google.com',//emisor del token
       strictDiscoveryDocumentValidation: false,//validacion del documento de descubrimiento
       clientId: '470362744997-1c9siru71mt849t5c4rq7cp733ub9sld.apps.googleusercontent.com',//id del cliente
-      redirectUri: window.location.origin+'/home',//redireccionamos a la pagina home
+      redirectUri: window.location.origin+'/pages/main',//url de redireccion
       scope: 'openid profile email',//permisos que se le piden al usuario
     }
     this.oAuthService.configure(config);//configuramos el servicio con la configuracion que acabamos de hacer

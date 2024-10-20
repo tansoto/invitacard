@@ -4,10 +4,11 @@
         <mat-expansion-panel *ngFor="let faq of faqs">
             <mat-expansion-panel-header>
                 <mat-panel-title>
+                  
                     {{ faq.question }}
                 </mat-panel-title>
                 <mat-panel-description>
-                    Haz clic para ver la respuesta.
+                    Haz clic para ver la respuesta.  <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i>
                 </mat-panel-description>
             </mat-expansion-panel-header>
             <p class="respuesta">{{ faq.answer }}</p>

@@ -1,0 +1,120 @@
+
+.body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 50vh;
+margin-top :50px;
+margin-bottom: 200px;
+background: #ffffff;
+position: relative; /* Para posicionar los botones sobre el carrusel */
+
+}
+.box{
+    
+    position: relative;
+    display: flex;
+    transform-style: preserve-3d;
+    perspective: 400px;
+   
+}
+.box .item{
+    position: absolute;
+    width: 200px;
+    top: calc(50% - 150px);
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 350px;
+    transition: 0.5s;
+    box-shadow: 0 0 50px rgb(0, 118, 228);
+    transform-style: preserve-3d;
+    transform-origin: bottom;
+    backface-visibility: hidden; /* Para evitar la parte trasera de la imagen */
+    user-select: none;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0,0,0,0.2));
+
+}
+.box .item:nth-child(1){
+    transform: translate3d(-300px,0,0) scale(0.8)rotateY(25deg);
+    z-index: 1;
+}
+.box .item:nth-child(2){
+    transform: translate3d(-200px,0,0) scale(0.8)rotateY(25deg);
+    z-index: 2;
+}
+.box .item:nth-child(3){
+    transform: translate3d(-100px,0,0) scale(0.9)rotateY(25deg);
+    z-index: 3;
+}
+.box .item:nth-child(4){
+    transform: translate3d(0px,0,0) scale(1)rotateY(0deg);
+    z-index: 5;
+}
+.box .item:nth-child(5){
+    transform: translate3d(100px,0,0) scale(0.9)rotateY(-15deg);
+    z-index: 3;
+}
+.box .item:nth-child(6){
+    transform: translate3d(200px,0,0) scale(0.8)rotateY(-25deg);
+    z-index: 2;
+}
+.box .item:nth-child(7){
+    transform: translate3d(300px,0,0)scale(0.8)rotateY(-25deg);
+    z-index: -1;
+}
+.box .item img{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Botones en los extremos */
+    transform: translateY(-50%);
+  }
+  
+  .buttons span {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+  }
+  
+  .buttons span:hover {
+    opacity: 1;
+  }
+  
+  .buttons span::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #000000;
+    border-left: 2px solid #000000;
+    transform: rotate(-45deg);
+  }
+  
+  .buttons span:last-child::before {
+    transform: rotate(135deg);
+  }
+  
+  .buttons .prev {
+    left: 10px;
+  }
+  
+  .buttons .next {
+    right: 10px;
+  }

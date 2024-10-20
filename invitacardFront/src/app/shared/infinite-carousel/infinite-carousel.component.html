@@ -1,0 +1,9 @@
+<div class="body">
+    <div class="box" #box>
+      <div class="item" *ngFor="let img of images"><img [src]="img" alt=""></div>
+    </div>
+    <div class="buttons">
+      <span class="prev" (click)="movePrev()"></span>
+      <span class="next" (click)="moveNext()"></span>
+    </div>
+  </div>

@@ -19,6 +19,6 @@ export class LoginComponent {
   }
   logout() { 
     this.authGoogleService.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/home']);
   } 
 }

@@ -23,14 +23,14 @@ mat-expansion-panel {
     margin-bottom: 15px;         /* Espacio entre paneles */
     border: 1px solid #04c4dd;   /* Borde celeste */
     border-radius: 8px;          /* Bordes redondeados */
-    background-color: rgba(0, 174, 255, 0.103);
+    background-color: #ffffff;   /* Color de fondo celeste para el encabezado */
 
    margin-left: 10%;
     margin-right: 10%
 }
 
 mat-expansion-panel-header {
-    background-color: #3a94df33;   /* Color de fondo celeste para el encabezado */
+    background-color: #45abff33;   /* Color de fondo celeste para el encabezado */
     transition: background-color 0.3s; /* Suavizar el cambio de color */
 }
 

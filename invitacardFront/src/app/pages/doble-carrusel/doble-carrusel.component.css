@@ -1,0 +1,98 @@
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0;
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin: 0 100px 20px 100px;
+  height: 350px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%);
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  height: 100%;
+}
+
+.card {
+  min-width: 33.33%; /* Mostrar 3 tarjetas */
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 70%;
+  height: 200px; /* Ajuste de tamaño de imagen */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.carousel-button.left {
+  /* agregar fondo transparnte*/
+  background-color: rgba(255, 255, 255, 0);
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0);
+}
+.arrow {
+  font-size: 24px;
+}
+
+.carousel-inner::before,
+.carousel-inner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  z-index: 10;
+  pointer-events: none;
+}
+/*titulo principal*/
+h1{
+  text-align: center;
+  margin: 20px;
+  color: #00ad96;
+  font-size: 40px;
+  font-weight: bold;
+}
+/*titulo tarjeta*/
+h3{
+  color: #0092beaf;
+  font-weight: bold;
+  font-size: 20px;
+}
+/*descripcion tarjeta*/
+p{
+  color: #0092beaf;
+  font-size: 15px;
+}
+a{
+  background-color: #00bfc58f!important;
+}

@@ -1,0 +1,110 @@
+.category-board {
+    padding: 20px;
+    text-align: center; /* Centrar texto */
+}
+h2{
+    color: #0092beaf;
+    font-weight: bold;
+    font-size: 45px;
+    margin: 50px;
+}
+.board-container {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar tarjetas */
+}
+
+.card {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    height: 380px; /* Altura de la tarjeta */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Ancho de la tarjeta */
+    margin: 10px; /* Espacio entre tarjetas */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: 1px solid transparent; /* Borde transparente para efectos de hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    border-color: #007bff; /* Cambia el borde en hover */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px; /* Espacio debajo del título */
+    color: #0081cc; /* Color del texto */
+    font-weight: 420; /* Texto en negrita */
+}
+
+.card img {
+    width: 100%; /* Ancho de la imagen */
+    border-radius: 10px;
+    object-fit: cover; /* Ajustar imagen sin distorsionar */
+}
+
+.card .price,
+.card .rating,
+.card .downloads {
+    font-size: 1rem;
+    margin: 5px 0; /* Margen para separación */
+    color: #333; /* Color del texto */
+}
+
+/* Estilos de la descripción */
+.description-container {
+    position: absolute;
+    bottom: 0; /* Posiciona la descripción en la parte inferior */
+    left: 0;
+    right: 0;
+    transform: translateY(100%); /* Inicia fuera de la vista */
+    transition: transform 0.3s; /* Transición para el efecto */
+    background: rgba(0, 0, 0, 0.7); /* Fondo sólido y medio transparente */
+    color: white;
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.card:hover .description-container {
+    transform: translateY(0); /* Muestra la descripción al hacer hover */
+}
+
+/* Efecto de scroll suave para la página */
+html {
+    scroll-behavior: smooth; /* Scroll suave */
+}
+
+/* Opcional: Estilo para el contenedor de la página */
+body {
+    background-color: #f5f5f5; /* Color de fondo general */
+    font-family: Arial, sans-serif; /* Fuente general */
+}
+.additional-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; /* Espacio entre la descripción y la info adicional */
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    color: #555; /* Color más suave para la info adicional */
+}
+
+/* Estilo individual para el precio */
+.price {
+    font-weight: bold; /* Hacer que el precio resalte */
+}
+
+/* Estilo individual para la calificación */
+.rating {
+    color: gold; /* Color dorado para las estrellas */
+}
+
+/* Estilo individual para descargas */
+.downloads {
+    color: #007bff; /* Color azul para el número de descargas */
+    
+}

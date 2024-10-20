@@ -1,26 +1,23 @@
 
     <mat-toolbar class="menu_header" color="primary">
         <a mat-button routerLink="/home">
-            <img [src]="imagenBarra" alt="" width="150px">
+            <img [src]="imagenBarra" alt="" >
         </a>
         <span class="linea-vertical-izq"></span>
         <span class="spacer"></span>
         <a mat-button routerLink="/home" class="boton-menu">InvitaCard</a>
         <!-- Iconos de redes sociales -->
         <a class="icon-rss" mat-icon-button href="https://www.facebook.com/" target="_blank">
-            <img src="../../../assets/icons/facebook.png" alt="facebook">
+            <i class="fa-brands fa-facebook"></i>
         </a>
         <a class="icon-rss" mat-icon-button href="https://www.instagram.com" target="_blank">
-            <img src="../../../assets/icons/instagram.png" alt="instagram">
-        </a>
-        <a class="icon-rss" mat-icon-button href="https://tik-tok" target="_blank">
-            <img src="../../../assets/icons/tik-tok.png" alt="tik-tok">
+            <i class="fa-brands fa-instagram"></i>
         </a>
         <a class="icon-rss" mat-icon-button href="https://www.youtube.com" target="_blank">
-            <img src="../../../assets/icons/youtube.png" alt="youtube">
+            <i class="fa-brands fa-youtube"></i>
         </a>
         <span class="example-spacer"></span>
         <a mat-flat-button class="login" routerLink="/auth/login">Iniciar sesión</a>
         <span class="linea-vertical-der"></span>
-        <a mat-button class="sign-in" routerLink="/signin">Registrarse</a>
+        <a mat-button class="sign-in" routerLink="/auth/signin">Registrarse</a>
     </mat-toolbar>    

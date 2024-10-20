@@ -1,0 +1,19 @@
+<nav class="navbar">
+    <div class="sup-izq">     
+        <app-dropdown-menu></app-dropdown-menu>
+        <!-- Logo a la izquierda -->
+        <a mat-button routerLink="/home">
+            <img src="../../assets/logotipos/logo-2-r.png" alt="" >
+        </a>
+    </div>
+    <!-- Contenido a la derecha -->
+    <div class="navbar-right">
+        <span class="welcome-message">Bienvenido/a, {{ userName }}</span>
+        <button class="icon-button" (click)="onSettings()">
+            <i class="fas fa-cog"></i>
+        </button>
+        <button class="icon-button" (click)="onLogout()">
+            <i class="fas fa-power-off"></i>
+        </button>
+    </div>
+</nav>

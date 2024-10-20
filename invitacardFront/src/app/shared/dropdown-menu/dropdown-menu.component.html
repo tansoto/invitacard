@@ -1,0 +1,20 @@
+<div class="menu-container">
+    <!-- Botón que cambia de dirección -->
+    <button class="menu-btn" (click)="toggleMenu()">
+      <i class="fas fa-bars" [class.rotate]="isMenuOpen"></i> <!-- Ícono que gira -->
+    </button>
+  
+    <!-- Sidebar -->
+    <div class="sidebar" [class.open]="isMenuOpen">
+      <a href="#" (click)="goToAccount()">Mi cuenta</a>
+      <a href="#" (click)="goToOrders()">Mis pedidos</a>
+      <a href="#" (click)="goToDownloads()">Descargas</a>
+      <a href="#" (click)="goToSupport()">Soporte</a>
+      <a href="#" (click)="goToHelp()">Ayuda</a>
+      <a href="#" (click)="logout()">Cerrar sesión</a>
+    </div>
+  
+    <!-- Fondo oscuro que cierra el menú -->
+    <div *ngIf="isMenuOpen" class="overlay" (click)="toggleMenu()"></div>
+  </div>
+  

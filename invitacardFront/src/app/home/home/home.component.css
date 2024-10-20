@@ -1,60 +1,4 @@
-.example-spacer {
-    flex: 1 1 auto;
-}
 
-.spacer {
-    flex: 0 0 30px;
-}
-
-.linea-vertical-izq {
-    position: relative;
-    height: 60%;  /* Cambiar tamaño de línea vertical */
-    width: 1px; 
-    background-color: #ffffff; 
-    left: 15px;
-    top: 0;
-}
-
-.icon-rss {
-    padding: 3px;
-}
-
-.boton-menu {
-    font-size: 18px;
-}
-
-.login {
-    border-radius: 15px !important;
-    color: #ffffff !important;
-    border: 1px solid #03e6da!important;
-    padding: 0px !important;
-    margin: 5px;
-    background-color: #10dfb2 !important;
-    box-shadow:2px 2px 10px rgb(224, 51, 51);
-}
-
-.sign-in {
-    border-radius: 15px !important;
-    color: white !important;
-    border: 1px solid #00e9f1!important;
-    padding: 0px !important;
-}
-
-a {
-    width: 130px;
-    height: 50px !important; 
-    padding: 0px;
-}
-
-img {
-    padding: 0px;
-    margin-top: 9px;
-}
-
-.menu_header {
-    background-color: #1A5276 !important;
-}
-/* hasta aqui estan las clases de la barra de navegacion */
 /* desde aqui estan las clases de la pagina principal */
 .mdc-card {
     display: flex;
@@ -82,12 +26,24 @@ mat-card-subtitle {
     font-size: 20px;
     font-weight: bold;
 }
+.img-brillante {
+
+    filter: drop-shadow(0 0 15px rgba(0, 225, 255, 0.377)); /* Efecto de sombra */
+}
+.img-brillante:hover {
+    filter: drop-shadow(0 0 20px rgba(202, 188, 0, 0.644)); /* Efecto de sombra al pasar el mouse */
+    
+}
 
 .button-crear {
     margin-top: 2%;
     margin-left: 20% !important;
-    border: 2px solid #2184c2 !important;
+    border: 2px solid #009fc7 !important;
     border-radius: 15px !important;
+    background-color: rgba(0, 148, 168, 0.747) !important;
+    width: 20%;
+    color: white !important;
+    
 }
 
 .img-home {
@@ -98,7 +54,6 @@ mat-card-subtitle {
 img {
     width: 75%;
 }
-
 .container-principal {
     height: 60%;
     display: flex; /* Usar flexbox para alinear elementos horizontalmente */
@@ -110,8 +65,13 @@ img {
 
 /* hasta aqui estan las clases de la pagina principal */
 /* desde aqui estan las clases de la pagina de plantillas */
+.segundo-scroll{
+    display: flex;
+    flex-direction: column;
+}
 .container-scroll-header{
     display: flex;
+    width: 100%;
 }
 .titulo-scroll{
     width: 80%;
@@ -119,76 +79,6 @@ img {
 }
 .descripcion-scroll{
     padding-top: 1%;
-}
-.carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px; /* Ajusta el ancho máximo del carrusel */
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 20px; /* Opcional: Bordes redondeados para darle un mejor estilo */
-}
-.carrusel{
-    margin-top: 30px;
-}
-.carousel {
-    margin-top: 200px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 250px; /* Ajusta la altura del carrusel */
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-}
-
-.carousel-slide {
-    min-width: 90%;
-    height: 100%;
-    transition: opacity 0.5s ease-in-out;
-    position: relative;
-}
-
-.carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen sin perder su proporción */
-    object-position: center; /* Centra la imagen en su contenedor */
-}
-
-/* Efecto de difuminado */
-.previous img, .next img {
-    filter: blur(4px);
-    opacity: 0.5;
-}
-
-.current img {
-    opacity: 1;
-    filter: none;
-}
-
-/* Estilos para los botones de flechas */
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.arrow-left {
-    left: 10px;
-}
-
-.arrow-right {
-    right: 10px;
 }
 .button-container {
     display: flex;               /* Utiliza flexbox para alinear los botones */
@@ -250,137 +140,6 @@ img {
 }
 
 /* hasta aqui estan las clases de la pagina de diseño  o tercer scroll*/
-/* desde aqui estan las clases de la pagina de contacto */
-.contact-request {
-    background-color: #fafafa;               /* Color de fondo más claro */
-    padding: 60px 30px;                      /* Espaciado interno aumentado */
-    text-align: center;                      /* Centra el texto */
-    border-radius: 10px;                     /* Bordes redondeados */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
-    margin: 40px 0;                          /* Margen superior e inferior */
-}
-
-.request-header {
-    margin-bottom: 30px;                     /* Espacio debajo del encabezado */
-}
-
-.contact-request h2 {
-    font-size: 30px;                         /* Tamaño del título más grande */
-    margin-bottom: 15px;                     /* Espacio debajo del título */
-    color: #1A5276;                          /* Color del título */
-    font-weight: bold;                       /* Negrita para el título */
-}
-
-.contact-request p {
-    font-size: 18px;                         /* Tamaño del texto explicativo */
-    color: #555;                             /* Color del texto más suave */
-    margin-bottom: 30px;                     /* Espacio debajo del texto */
-}
-
-.request-form {
-    display: flex;                           /* Utiliza flexbox para alinear los campos */
-    flex-direction: column;                  /* Alinea los campos verticalmente */
-    align-items: center;                     /* Centra los campos */
-}
-
-.form-group {
-    width: 100%;                             /* Ancho completo */
-    max-width: 450px;                       /* Ancho máximo para los campos */
-    margin-bottom: 20px;                     /* Espacio entre los campos */
-}
-
-label {
-    font-size: 16px;                         /* Tamaño de la etiqueta */
-    color: #333;                             /* Color de la etiqueta */
-    margin-bottom: 5px;                      /* Espacio debajo de la etiqueta */
-    display: block;                          /* Hace que la etiqueta ocupe toda la línea */
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;                             /* Ancho completo del campo */
-    padding: 12px;                          /* Espaciado interno */
-    border: 1px solid #ccc;                 /* Borde del campo */
-    border-radius: 5px;                     /* Bordes redondeados */
-    font-size: 16px;                         /* Tamaño de la fuente */
-    transition: border-color 0.3s;          /* Transición suave para el color del borde */
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: #1A5276;                   /* Color del borde al enfocar */
-    outline: none;                           /* Elimina el contorno predeterminado */
-}
-
-.submit-button {
-    background-color: #1A5276;               /* Color de fondo del botón */
-    color: white;                            /* Color del texto del botón */
-    border: none;                            /* Sin borde */
-    border-radius: 5px;                     /* Bordes redondeados */
-    padding: 12px 25px;                      /* Espaciado interno del botón */
-    font-size: 18px;                         /* Tamaño del texto del botón */
-    cursor: pointer;                         /* Cursor de puntero */
-    transition: background-color 0.3s, transform 0.3s; /* Transición suave */
-}
-
-.submit-button:hover {
-    background-color: #0e3c5a;               /* Color de fondo al pasar el mouse */
-    transform: translateY(-2px);            /* Efecto de elevación al pasar el mouse */
-}
-/* hasta aqui estan las clases de la pagina de contacto */
-/* desde aqui estan las clases de la pagina de faq */
-.faq-section {
-    padding: 60px 20px;           /* Espaciado interno */
-    background-color: #f8ffff;   /* Color de fondo suave */
-    border-radius: 10px;          /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin: 40px 0;               /* Margen arriba y abajo */
-}
-
-.faq-section h2 {
-    text-align: center;           /* Centrar el título */
-    font-size: 36px;             /* Tamaño de fuente grande */
-    color: #0362b1;              /* Color verde oscuro */
-    margin-bottom: 30px;         /* Espacio debajo del título */
-}
-
-mat-accordion {
-    max-width: 800px;            /* Ancho máximo del acordeón */
-    margin: 0 auto;              /* Centrar el acordeón */
-}
-
-mat-expansion-panel {
-    margin-bottom: 15px;         /* Espacio entre paneles */
-    border: 1px solid #04c4dd;   /* Borde celeste */
-    border-radius: 8px;          /* Bordes redondeados */
-    background-color: rgba(0, 174, 255, 0.103);
-
-   margin-left: 10%;
-    margin-right: 10%
-}
-
-mat-expansion-panel-header {
-    background-color: #3a94df33;   /* Color de fondo celeste para el encabezado */
-    transition: background-color 0.3s; /* Suavizar el cambio de color */
-}
-
-mat-expansion-panel-header:hover {
-    background-color: #003fec;   /* Efecto hover para el encabezado */
-}
-
-mat-panel-title {
-    font-weight: bold;            /* Negrita para el título */
-    font-size: 18px;             /* Tamaño de fuente para el título */
-    color: #002e4d;              /* Color verde oscuro */
-}
-
-mat-panel-description {
-    font-size: 14px;             /* Tamaño de fuente más pequeño */
-    color: #02719c;              /* Color verde para la descripción */
-}
-/* hasta aqui estan las clases de la pagina de faq */
 
 @media (max-width: 600px) {
     .boton-menu {

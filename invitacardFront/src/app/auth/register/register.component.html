@@ -1,1 +1,54 @@
-<p>register works!</p>
+<div class="register-container">
+    <div class="register-card">
+        <h2>Registrarse</h2>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <!-- Nombre Completo -->
+            <div class="form-group">
+                <label for="fullName">Nombre Completo</label>
+                <input type="text" id="fullName" class="form-control" formControlName="fullName">
+                <div *ngIf="submitted && registerForm.controls['fullName'].invalid" class="error">
+                    El nombre es requerido (mínimo 3 caracteres).
+                </div>
+            </div>
+
+            <!-- Correo Electrónico -->
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" class="form-control" formControlName="email">
+                <div *ngIf="submitted && registerForm.controls['email'].invalid" class="error">
+                    Ingresa un correo electrónico válido.
+                </div>
+            </div>
+
+            <!-- Contraseña -->
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" class="form-control" formControlName="password">
+                <div *ngIf="submitted && registerForm.controls['password'].invalid" class="error">
+                    La contraseña debe tener al menos 6 caracteres.
+                </div>
+            </div>
+
+            <!-- Confirmar Contraseña -->
+            <div class="form-group">
+                <label for="confirmPassword">Confirmar Contraseña</label>
+                <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword">
+                <div *ngIf="submitted && registerForm.errors?.['mismatch']" class="error">
+                    Las contraseñas no coinciden.
+                </div>
+            </div>
+
+            <!-- Términos y Condiciones -->
+            <div class="form-group">
+                <input type="checkbox" id="terms" formControlName="terms">
+                <label for="terms">Acepto los términos y condiciones</label>
+                <div *ngIf="submitted && registerForm.controls['terms'].invalid" class="error">
+                    Debes aceptar los términos y condiciones.
+                </div>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+</div>

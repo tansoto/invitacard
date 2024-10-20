@@ -9,6 +9,8 @@ import { AuthModule } from './auth/auth.module';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PagesModule } from './pages/pages.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -20,7 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AuthModule,
     OAuthModule.forRoot(), // el for root es importante para que el modulo se cargue en el app.module
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FontAwesomeModule,
+    PagesModule
   ],
   providers: [
     provideAnimationsAsync()

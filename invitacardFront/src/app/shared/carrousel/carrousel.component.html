@@ -2,6 +2,7 @@
     <div class="main-image">
       <div class="descripcion-img">
           <p>{{images[currentIndex].descripcion}}</p>
+          
           <p>${{images[currentIndex].precio}}</p>
       </div>
       <img [src]="images[currentIndex].src" [alt]="images[currentIndex].alt" />
@@ -11,8 +12,8 @@
           [ngClass]="{'active': i === currentIndex, 'inactive': i !== currentIndex}">
         <img [src]="image.src" [alt]="image.alt" />
         <div class="info">
-          <p>{{ image.titulo }}</p>
-          <p>{{ image.subtitulo }}</p>
+          <p class="titulo">{{ image.titulo }}</p>
+          <p class="subtitulo">{{ image.subtitulo }}</p>
         </div>
       </div>
     </div>

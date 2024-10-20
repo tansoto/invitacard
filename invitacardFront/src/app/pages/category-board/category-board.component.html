@@ -1,0 +1,17 @@
+<div class="category-board">
+    <h2>¡Selecciona tu temática favorita!</h2>
+    <div class="board-container">
+        <div class="card" *ngFor="let item of items" (click)="onSelect(item)">
+            <h3>{{ item.title }}</h3>
+            <img [src]="item.image" alt="{{ item.title }}" />
+            <div class="additional-info">
+                <span class="price">${{ item.price }}</span>
+                <span class="rating">⭐ {{ item.rating }}</span>
+                <span class="downloads">📥 {{ item.downloads }}</span>
+            </div>
+            <div class="description-container">
+                <p>{{ item.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>

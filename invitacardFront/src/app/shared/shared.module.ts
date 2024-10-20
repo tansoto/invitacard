@@ -15,7 +15,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FeaturesCardComponent } from './features-card/features-card.component';
 import { CarrouselComponent } from './carrousel/carrousel.component';
-import { IgxCarouselModule,IgxListModule} from "igniteui-angular";
+import { ContactWspComponent } from './contact-wsp/contact-wsp.component';
+import { HeaderMainComponent } from './header-main/header-main.component';
+import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
+import { InfiniteCarouselComponent } from './infinite-carousel/infinite-carousel.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,11 @@ import { IgxCarouselModule,IgxListModule} from "igniteui-angular";
     FooterComponent,
     ContactFormComponent,
     FeaturesCardComponent,
-    CarrouselComponent
+    CarrouselComponent,
+    ContactWspComponent,
+    HeaderMainComponent,
+    DropdownMenuComponent,
+    InfiniteCarouselComponent
   ],
   imports: [
     CommonModule,
@@ -36,8 +43,6 @@ import { IgxCarouselModule,IgxListModule} from "igniteui-angular";
     MatButtonModule,
     MatCardModule,
     MatExpansionModule,
-    IgxCarouselModule,
-    IgxListModule
   ],
   exports:[
     HeaderHomeComponent,
@@ -46,7 +51,11 @@ import { IgxCarouselModule,IgxListModule} from "igniteui-angular";
     TestimonialsComponent,
     FAQComponent,
     FooterComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    ContactWspComponent,
+    HeaderMainComponent,
+    DropdownMenuComponent,
+    InfiniteCarouselComponent
   ]
 })
 export class SharedModule { }

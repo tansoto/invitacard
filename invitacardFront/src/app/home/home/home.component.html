@@ -1,4 +1,3 @@
-
 <app-header-home></app-header-home>
 <!-- Separacion -->
 
@@ -10,13 +9,13 @@
             <a mat-button class="button-crear"><mat-icon>add</mat-icon> Crear</a>
         </div>
         <div class="img-home">
-            <img src="../../../assets/images/imagen-home.png" alt="tarjeta">
+            <img class="img-brillante" src="../../../assets/images/home4.png" alt="tarjeta">
         </div>
     </div>
     <app-features-card></app-features-card>
 </div>
 <!-- Separacion -->
-<div class="segundo_scroll">
+<div class="segundo-scroll">
     <div class="container-scroll-header">
         <div class="titulo-scroll">
             <mat-card-title class="titulo-scroll">Facil de editar</mat-card-title>
@@ -31,70 +30,20 @@
             </mat-card-content>
         </div>
     </div>
-    <div class="carrusel">
-        <mat-card class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-track" [style.transform]="getTransform()">
-                    <!-- Duplicar la última imagen al inicio -->
-                    <div class="carousel-slide" [class.current]="currentIndex === 0"
-                        [class.previous]="currentIndex === totalImages - 1" [class.next]="currentIndex === 1">
-                        <img [src]="images[totalImages - 1]" alt="carousel image">
-                    </div>
-                    <div class="carousel-slide" *ngFor="let image of images; let i = index"
-                        [class.current]="currentIndex === i + 1" [class.previous]="currentIndex === i"
-                        [class.next]="currentIndex === (i + 2) % totalImages">
-                        <img [src]="image" alt="carousel image">
-                    </div>
-                    <!-- Duplicar la primera imagen al final -->
-                    <div class="carousel-slide" [class.current]="currentIndex === totalImages + 1"
-                        [class.previous]="currentIndex === totalImages" [class.next]="currentIndex === 0">
-                        <img [src]="images[0]" alt="carousel image">
-                    </div>
-                </div>
-            </div>
-            <!-- Botones de navegación -->
-            <div class="arrow arrow-left" (click)="previousSlide()">&#10094;</div>
-            <div class="arrow arrow-right" (click)="nextSlide()">&#10095;</div>
-        </mat-card>
-    </div>
+    <app-infinite-carousel></app-infinite-carousel>
     <div class="button-container">
-        <a mat-button class="button-crear2"><mat-icon>add</mat-icon> Crear</a>
         <a mat-button class="button-ver-plantillas">Ver más plantillas</a>
     </div>
 </div>
 <!-- Separacion -->
 <div class="tercer_scroll">
+    
     <div class="container-scroll-header">
         <div class="titulo-scroll">
             <mat-card-title class="titulo-scroll">Plantillas Destacadas</mat-card-title>
         </div>
     </div>
-    <div class="carrusel">
-        <mat-card class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-track" [style.transform]="getTransform()">
-                    <!-- Duplicar la última imagen al inicio -->
-                    <div class="carousel-slide" [class.current]="currentIndex === 0"
-                        [class.previous]="currentIndex === totalImages - 1" [class.next]="currentIndex === 1">
-                        <img [src]="images[totalImages - 1]" alt="carousel image">
-                    </div>
-                    <div class="carousel-slide" *ngFor="let image of images; let i = index"
-                        [class.current]="currentIndex === i + 1" [class.previous]="currentIndex === i"
-                        [class.next]="currentIndex === (i + 2) % totalImages">
-                        <img [src]="image" alt="carousel image">
-                    </div>
-                    <!-- Duplicar la primera imagen al final -->
-                    <div class="carousel-slide" [class.current]="currentIndex === totalImages + 1"
-                        [class.previous]="currentIndex === totalImages" [class.next]="currentIndex === 0">
-                        <img [src]="images[0]" alt="carousel image">
-                    </div>
-                </div>
-            </div>
-            <!-- Botones de navegación -->
-            <div class="arrow arrow-left" (click)="previousSlide()">&#10094;</div>
-            <div class="arrow arrow-right" (click)="nextSlide()">&#10095;</div>
-        </mat-card>
-    </div>
+    <app-carousel-expanding></app-carousel-expanding>
     <div class="button-container">
         <!-- crea 4 botones, el primero llamado elige tu diseño, el segundo personaliza, el tercero comparte y el ultimo descarga, cada uno unido por uuna flecha-->
         <a mat-button class="button-diseño">Elige tu diseño</a>
@@ -107,10 +56,7 @@
     </div>
     <app-testimonials></app-testimonials>
 </div>
-<!-- Separacion -->
 <app-contact-form></app-contact-form>
-
+<app-contact-wsp></app-contact-wsp>
 <app-faq></app-faq>
-<!-- Separacion -->
 <app-footer></app-footer>
-<app-carrousel></app-carrousel>

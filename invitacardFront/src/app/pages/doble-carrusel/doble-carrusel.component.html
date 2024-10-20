@@ -1,0 +1,40 @@
+<h1>¡Selecciona tu temática de hoy!</h1>
+<div class="carousel-container">
+    <!-- Primer carrusel (hacia la derecha) -->
+    <div class="carousel" #carousel1>
+        <button class="carousel-button left" (click)="prevCarousel1()">
+            <span class="arrow">⬅️</span>
+        </button>
+        <div class="carousel-inner" [style.transform]="'translateX(-' + currentIndex1 * (100 / cards1.length) + '%)'">
+            <div class="card" *ngFor="let card of cards1">
+                <h3>{{ card.title }}</h3>
+                <img [src]="card.image" alt="{{ card.title }}" />
+                <p>{{ card.description }}</p>
+                <!-- Pasa el título como parámetro de ruta -->
+                <a mat-raised-button [routerLink]="['/category-selected', card.title.toLowerCase()]">Seleccionar</a>
+            </div>
+        </div>
+        <button class="carousel-button right" (click)="nextCarousel1()">
+            <span class="arrow">➡️</span>
+        </button>
+    </div>
+
+    <!-- Segundo carrusel (hacia la izquierda) -->
+    <div class="carousel" #carousel2>
+        <button class="carousel-button left" (click)="prevCarousel2()">
+            <span class="arrow">⬅️</span>
+        </button>
+        <div class="carousel-inner" [style.transform]="'translateX(-' + currentIndex2 * (100 / cards2.length) + '%)'">
+            <div class="card" *ngFor="let card of cards2">
+                <h3>{{ card.title }}</h3>
+                <img [src]="card.image" alt="{{ card.title }}" />
+                <p>{{ card.description }}</p>
+                <!-- Pasa el título como parámetro de ruta -->
+                <a mat-raised-button [routerLink]="['/category-selected', card.title.toLowerCase()]">Seleccionar</a>
+            </div>
+        </div>
+        <button class="carousel-button right" (click)="nextCarousel2()">
+            <span class="arrow">➡️</span>
+        </button>
+    </div>
+</div>
