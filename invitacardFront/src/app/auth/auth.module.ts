@@ -4,9 +4,9 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { PasswordModule } from 'primeng/password';
 @NgModule({
   declarations: [
     LoginComponent,
@@ -15,7 +15,11 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FloatLabelModule,
+    CommonModule,
+    FormsModule,
+    PasswordModule
   ],
   exports: [ 
     LoginComponent 

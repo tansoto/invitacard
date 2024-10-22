@@ -23,6 +23,7 @@ images = [
 // Función para mover al siguiente
 moveNext() {
   const items = this.box.nativeElement.children;// Obtiene todos los elementos hijos
+  console.log(items);
   this.box.nativeElement.appendChild(items[0]); // Mueve el primer elemento al final
 }
 

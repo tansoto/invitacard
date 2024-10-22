@@ -1,11 +1,11 @@
 <h1>¡Selecciona tu temática de hoy!</h1>
 <div class="carousel-container">
     <!-- Primer carrusel (hacia la derecha) -->
-    <div class="carousel" #carousel1>
+    <div class="carousel" >
         <button class="carousel-button left" (click)="prevCarousel1()">
             <span class="arrow">⬅️</span>
         </button>
-        <div class="carousel-inner" [style.transform]="'translateX(-' + currentIndex1 * (100 / cards1.length) + '%)'">
+        <div class="carousel-inner" #carousel1 [style.transform]="'translateX(-' + currentIndex1 * (100 / cards1.length) + '%)'">
             <div class="card" *ngFor="let card of cards1">
                 <h3>{{ card.title }}</h3>
                 <img [src]="card.image" alt="{{ card.title }}" />

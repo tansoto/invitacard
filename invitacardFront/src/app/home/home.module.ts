@@ -12,7 +12,7 @@ import {MatCardModule} from "@angular/material/card";
 import { MatExpansionModule } from '@angular/material/expansion';
 import { SharedModule } from '../shared/shared.module';
 import { CarouselExpandingComponent } from './carousel-expanding/carousel-expanding.component';
-
+import { FieldsetModule } from 'primeng/fieldset';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { CarouselExpandingComponent } from './carousel-expanding/carousel-expand
     MatButtonModule,
     MatCardModule,
     MatExpansionModule,
-    SharedModule
+    SharedModule,
+    FieldsetModule
 
   ],
   exports: [ HomeComponent ]

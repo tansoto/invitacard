@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  value: string | undefined;
   constructor(private  authGoogleService: AuthGoogleService,private router:Router) { }
   login() {
     this.authGoogleService.login();

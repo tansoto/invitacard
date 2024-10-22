@@ -10,13 +10,13 @@ export class DobleCarruselComponent implements OnInit{
   @ViewChild('carousel2', { static: true }) carousel2!: ElementRef;
 
   currentIndex1 = 0;
-  currentIndex2 = 1;
+  currentIndex2 = 2;
 
   cards1 = [
     { title: 'Videojuegos', image: '../../assets/categorias/juegos.jpg', description: 'Conjunto  de tus juegos favoritos' },
     { title: 'Artistas', image: '../../assets/categorias/artistas.jpg', description: 'Conjunto de tus artistas favoritos' },
     { title: 'Dibujos Animados', image: '../../assets/categorias/dibujos.jpg', description: 'Conjunto de tus dubujos animados favoritos' },
-    { title: 'Pelicualas', image: '../../assets/categorias/peliculas.jpg', description: 'Conjunto de tus peliculas favoritas' },
+    { title: 'Peliculas', image: '../../assets/categorias/peliculas.jpg', description: 'Conjunto de tus peliculas favoritas' },
   ];
 
   cards2 = [
@@ -38,9 +38,11 @@ export class DobleCarruselComponent implements OnInit{
   }
 
   nextCarousel1() {
-    this.currentIndex1 = (this.currentIndex1 + 1) % this.cards1.length;// Se asegura de que el índice no sea mayor que la longitud del array
+    const items = this.carousel1.nativeElement.children;
+    console.log(items);
+    this.currentIndex1 = (this.currentIndex1 + 1) % this.cards1.length+1;// Se asegura de que el índice no sea mayor que la longitud del array
     if (this.currentIndex1 >2){
-      this.currentIndex1 = 0;
+      this.currentIndex1 = 2; 
     }
   }
 
