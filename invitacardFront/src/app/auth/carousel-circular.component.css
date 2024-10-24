@@ -1,0 +1,9 @@
+img {
+    width: 100%;  /* Para que ocupen el 100% del contenedor */
+    height: 520px; /* Mantiene la proporción original de la imagen */
+    object-fit: fit; /* Asegura que la imagen se recorte si es necesario para llenar el espacio */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+p-button{
+  padding: 10px;
+}

@@ -1,0 +1,33 @@
+<div class="card">      
+  <div class="card-products">
+    <p-carousel 
+    [value]="products" 
+    [numVisible]="4" 
+    [numScroll]="1" 
+    [circular]="true" 
+    [responsiveOptions]="responsiveOptions" 
+    autoplayInterval="3000">
+    <ng-template let-product pTemplate="item">
+      <div class="border-1 surface-border border-round m-2 p-3">
+        <div class="mb-3">
+          <div class="relative mx-auto">
+              <img 
+            [alt]="product.name" 
+              src="../../assets/categorias/{{ product.image }}" 
+              class="w-full border-round" />
+          </div>
+        </div>
+        <div class="flex justify-content-between align-items-center">
+          <span>
+            <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
+            <p-button icon="pi pi-shopping-cart" styleClass="ml-2" />
+            <p-button [routerLink]="['/category-selected', product.name.toLowerCase()]">Seleccionar</p-button>
+          </span>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>
+    
+  </div>
+  

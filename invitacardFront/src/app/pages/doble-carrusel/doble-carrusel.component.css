@@ -75,13 +75,7 @@
   pointer-events: none;
 }
 /*titulo principal*/
-h1{
-  text-align: center;
-  margin: 20px;
-  color: #00ad96;
-  font-size: 40px;
-  font-weight: bold;
-}
+
 /*titulo tarjeta*/
 h3{
   color: #0092beaf;

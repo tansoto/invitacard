@@ -12,7 +12,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { DobleCarruselComponent } from './doble-carrusel/doble-carrusel.component';
 import { CategorySelcetedComponent } from './category-selceted/category-selceted.component';
 import { CategoryBoardComponent } from './category-board/category-board.component';
-
+import { CarouselCircularComponent } from './carousel-circular/carousel-circular.component';
+import {CarouselModule} from 'primeng/carousel';
+import { ButtonModule } from 'primeng/button';
+import {TagModule} from 'primeng/tag';
 
 
 @NgModule({
@@ -20,7 +23,8 @@ import { CategoryBoardComponent } from './category-board/category-board.componen
     MainComponent,
     DobleCarruselComponent,
     CategorySelcetedComponent,
-    CategoryBoardComponent
+    CategoryBoardComponent,
+    CarouselCircularComponent
   ],
   imports: [
     CommonModule,
@@ -32,6 +36,11 @@ import { CategoryBoardComponent } from './category-board/category-board.componen
     MatIconModule,
     MatButtonModule,
     MatExpansionModule,
+    TagModule,
+    CarouselModule,
+    ButtonModule,
+  
+
 
   ],
   exports: [ 

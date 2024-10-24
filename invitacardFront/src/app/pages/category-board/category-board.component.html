@@ -1,5 +1,5 @@
 <div class="category-board">
-    <h2>¡Selecciona tu temática favorita!</h2>
+    <h2>¡Selecciona tus {{title}} favoritos!</h2>
     <div class="board-container">
         <div class="card" *ngFor="let item of items" (click)="onSelect(item)">
             <h3>{{ item.title }}</h3>

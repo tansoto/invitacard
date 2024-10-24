@@ -30,7 +30,7 @@ export class CategorySelcetedComponent {
     { title: 'Paw patrol', image: '../../assets/categorias/dibujos/pawpatrol.jpg', description: 'Descripción del Dibujo 1',price: '1000',rating: '4.5',downloads: '13450'  },
     { title: 'Peppa Pig', image: '../../assets/categorias/dibujos/pepa.jpg', description: 'Descripción del Dibujo 2' ,price: '1000',rating: '4.5',downloads: '13450'},
     { title: 'La Granja de Zenon', image: '../../assets/categorias/dibujos/zenon.jpg', description: 'Descripción del Dibujo 3' ,price: '1000',rating: '4.5',downloads: '13450'},
-    { title: 'Mickey Mouse y amigos', image: '../../assets/categorias/dibujos/micky.jpg', description: 'Descripción del Dibujo 4' ,price: '1000',rating: '4.5',downloads: '13450'},
+    { title: 'Mickey Mouse', image: '../../assets/categorias/dibujos/micky.jpg', description: 'Descripción del Dibujo 4' ,price: '1000',rating: '4.5',downloads: '13450'},
     { title: 'Frozen', image: '../../assets/categorias/dibujos/frozen.jpg', description: 'Descripción del Dibujo 5',price: '1000',rating: '4.5',downloads: '13450' },
     { title: 'Minions', image: '../../assets/categorias/dibujos/minions.jpg', description: 'Descripción del Dibujo 6' ,price: '1000',rating: '4.5',downloads: '13450'},
     { title: 'Toy Story', image: '../../assets/categorias/dibujos/toystory.jpg', description: 'Descripción del Dibujo 7',price: '1000',rating: '4.5',downloads: '13450' },
