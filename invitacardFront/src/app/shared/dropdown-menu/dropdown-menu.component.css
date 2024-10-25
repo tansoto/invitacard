@@ -20,7 +20,7 @@
 
 /* Efecto hover para el botón */
 .menu-btn:hover {
-  background-color: #0056b3;
+  background-color: #1A5276;
   transform: scale(1.1); /* Agrandar un poco al pasar el mouse */
 }
 

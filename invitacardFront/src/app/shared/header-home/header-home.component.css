@@ -1,7 +1,11 @@
+
+/*--------------------------------------------------------------menu*/  
 .example-spacer {
     flex: 1 1 auto;
 }
-
+app-dropdown-menu{
+    display: none;
+}
 .spacer {
     flex: 0 0 30px;
 }
@@ -59,3 +63,15 @@ i{
     background-color: #1A5276 !important;
 }
 /* hasta aqui estan las clases de la barra de navegacion */
+/* para pantallas de celulares */
+@media screen and (max-width: 600px) {
+    app-dropdown-menu{
+        display: block;
+    }
+.icon-rss,.login,.sign-in,span{
+    display: none;
+}
+img{
+    display: none;
+}
+}

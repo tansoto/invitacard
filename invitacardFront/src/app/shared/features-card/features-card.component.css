@@ -38,3 +38,19 @@
     font-size: 16px; /* Tamaño del texto */
     color: #333; /* Color del texto */
 }
+@media screen and (max-width: 600px) {
+    .card-description{
+        font-size: 10px;
+    }
+    .check-icon{
+        font-size: 15px;
+    }
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-container{
+        margin-top: 20px;
+    }
+}

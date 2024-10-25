@@ -17,6 +17,14 @@ interface UserData {
 })
 export class HeaderMainComponent implements OnInit {
   userName: string = '';
+  menu = [
+    { label: 'Mi cuenta', action: this.goToAccount.bind(this) },
+    { label: 'Mis pedidos', action: this.goToOrders.bind(this) },
+    { label: 'Descargas', action: this.goToDownloads.bind(this) },
+    { label: 'Soporte', action: this.goToSupport.bind(this) },
+    { label: 'Ayuda', action: this.goToHelp.bind(this) },
+    { label: 'Cerrar sesión', action: this.logout.bind(this) }
+  ];
   constructor(private  authGoogleService: AuthGoogleService,private router:Router) { }
   ngOnInit(): void {
     const profile=this.getProfile();
@@ -41,5 +49,31 @@ export class HeaderMainComponent implements OnInit {
         const data = JSON.stringify(userProfile); // Esta línea convierte el objeto a string
         const parsedData: UserData = JSON.parse(data); // Esta línea convierte el string de vuelta a un objeto
         return parsedData;              // Devuelve el objeto de usuario
+  }
+  goToAccount() {
+    console.log('Mi cuenta');
+  }
+
+  goToOrders() {
+    console.log('Mis pedidos');
+  }
+
+  goToDownloads() {
+    console.log('Descargas');
+  }
+
+  goToSupport() {
+    console.log('Soporte');
+  }
+
+  goToHelp() {
+    console.log('Ayuda');
+  }
+
+  logout() {
+    console.log('Cerrando sesión');
+    /*navega al home y cierra la sesion*/
+    this.authGoogleService.logout();
+    this.router.navigate(['/home']);
   }
 }

@@ -1,23 +1,27 @@
 
-    <mat-toolbar class="menu_header" color="primary">
+<mat-toolbar class="menu_header" color="primary">
+    <div class="sup-izq">     
+        <app-dropdown-menu [menuItems]="menu"></app-dropdown-menu>
+        <!-- Logo a la izquierda -->
         <a mat-button routerLink="/home">
-            <img [src]="imagenBarra" alt="" >
+            <img src="../../assets/logotipos/logo-2-r.png" alt="" >
         </a>
-        <span class="linea-vertical-izq"></span>
-        <span class="spacer"></span>
-        <a mat-button routerLink="/home" class="boton-menu">InvitaCard</a>
-        <!-- Iconos de redes sociales -->
-        <a class="icon-rss" mat-icon-button href="https://www.facebook.com/" target="_blank">
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a class="icon-rss" mat-icon-button href="https://www.instagram.com" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a class="icon-rss" mat-icon-button href="https://www.youtube.com" target="_blank">
-            <i class="fa-brands fa-youtube"></i>
-        </a>
-        <span class="example-spacer"></span>
-        <a mat-flat-button class="login" routerLink="/auth/login">Iniciar sesión</a>
-        <span class="linea-vertical-der"></span>
-        <a mat-button class="sign-in" routerLink="/auth/signin">Registrarse</a>
-    </mat-toolbar>    
+    </div>
+    <span class="linea-vertical-izq"></span>
+    <span class="spacer"></span>
+    <a mat-button routerLink="/home" class="boton-menu">InvitaCard</a>
+    <!-- Iconos de redes sociales -->
+    <a class="icon-rss" mat-icon-button href="https://www.facebook.com/" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a class="icon-rss" mat-icon-button href="https://www.instagram.com" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a class="icon-rss" mat-icon-button href="https://www.youtube.com" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
+    <span class="example-spacer"></span>
+    <a mat-flat-button class="login" routerLink="/auth/login">Iniciar sesión</a>
+    <span class="linea-vertical-der"></span>
+    <a mat-button class="sign-in" routerLink="/auth/signin">Registrarse</a>
+</mat-toolbar>

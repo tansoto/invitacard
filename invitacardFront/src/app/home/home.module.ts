@@ -13,13 +13,15 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { SharedModule } from '../shared/shared.module';
 import { CarouselExpandingComponent } from './carousel-expanding/carousel-expanding.component';
 import { FieldsetModule } from 'primeng/fieldset';
-
+import { GalleriaAutoplayComponent } from './galleria-autoplay/galleria-autoplay.component';
+import { GalleriaModule } from 'primeng/galleria';
 @NgModule({
   declarations: [
     HomeComponent,
     FeaturedinvitationsComponent,
     HowitworksComponent,
-    CarouselExpandingComponent
+    CarouselExpandingComponent,
+    GalleriaAutoplayComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,8 @@ import { FieldsetModule } from 'primeng/fieldset';
     MatCardModule,
     MatExpansionModule,
     SharedModule,
-    FieldsetModule
+    FieldsetModule,
+    GalleriaModule
 
   ],
   exports: [ HomeComponent ]

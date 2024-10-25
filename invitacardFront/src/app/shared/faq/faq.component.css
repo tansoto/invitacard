@@ -1,50 +1,95 @@
-/* desde aqui estan las clases de la pagina de faq */
+/* Sección FAQ */
 .faq-section {
-    padding: 60px 20px;           /* Espaciado interno */
-    background-color: #f8ffff;   /* Color de fondo suave */
-    border-radius: 10px;          /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin: 40px 0;               /* Margen arriba y abajo */
+    padding: 60px 20px;
+    background-color: #f8ffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
 }
 
 .faq-section h2 {
-    text-align: center;           /* Centrar el título */
-    font-size: 36px;             /* Tamaño de fuente grande */
-    color: #0362b1;              /* Color verde oscuro */
-    margin-bottom: 30px;         /* Espacio debajo del título */
+    text-align: center;
+    font-size: 2.2em;
+    color: #0362b1;
+    margin-bottom: 30px;
 }
 
 mat-accordion {
-    max-width: 800px;            /* Ancho máximo del acordeón */
-    margin: 0 auto;              /* Centrar el acordeón */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 mat-expansion-panel {
-    margin-bottom: 15px;         /* Espacio entre paneles */
-    border: 1px solid #04c4dd;   /* Borde celeste */
-    border-radius: 8px;          /* Bordes redondeados */
-    background-color: #ffffff;   /* Color de fondo celeste para el encabezado */
-
-   margin-left: 10%;
-    margin-right: 10%
+    margin-bottom: 15px;
+    border: 1px solid #04c4dd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
+/* Panel Header */
 mat-expansion-panel-header {
-    background-color: #45abff33;   /* Color de fondo celeste para el encabezado */
-    transition: background-color 0.3s; /* Suavizar el cambio de color */
+    display: flex;               /* Usar flexbox para ajustar el contenido */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #45abff33;
+    transition: background-color 0.3s ease-in-out;
+    overflow-wrap: break-word;    /* Ajustar palabras largas */
+    word-break: break-word;
+    max-width: 100%;              /* Asegurar que el contenido no desborde */
 }
 
 mat-expansion-panel-header:hover {
-    background-color: #003fec;   /* Efecto hover para el encabezado */
+    background-color: #003fec;
 }
 
+/* Título dentro del panel */
 mat-panel-title {
-    font-weight: bold;            /* Negrita para el título */
-    font-size: 18px;             /* Tamaño de fuente para el título */
-    color: #002e4d;              /* Color verde oscuro */
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #002e4d;
+    white-space: normal;          /* Permitir salto de línea */
+    word-break: break-word;       /* Forzar ajuste de palabras largas */
+    max-width: 70%;               /* Limitar el ancho del título */
+    overflow-wrap: break-word;
+    overflow: hidden;             /* Evitar desbordamientos */
+    text-overflow: ellipsis;      /* Añadir puntos suspensivos si es demasiado largo */
 }
 
+/* Descripción dentro del panel */
 mat-panel-description {
-    font-size: 14px;             /* Tamaño de fuente más pequeño */
-    color: #02719c;              /* Color verde para la descripción */
+    font-size: 1em;
+    color: #02719c;
+    white-space: normal;
+    word-break: break-word;
+    max-width: 25%;               /* Limitar el ancho de la descripción */
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;      /* Puntos suspensivos si es demasiado largo */
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    mat-panel-title {
+        font-size: 0.9em;         /* Reducir el tamaño de fuente */
+        white-space: normal;
+        word-break: break-word;
+        max-width: 60%;           /* Ajustar ancho en pantallas pequeñas */
+        overflow: hidden;
+        text-overflow: ellipsis;  /* Puntos suspensivos si el texto es largo */
+    }
+
+    mat-panel-description {
+        font-size: 0.61em;         /* Reducir el tamaño de fuente */
+        max-width: 30%;           /* Ajustar ancho de la descripción */
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Ajustar el espaciado y márgenes */
+    mat-expansion-panel {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }

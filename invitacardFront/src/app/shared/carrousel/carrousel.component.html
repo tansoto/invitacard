@@ -10,7 +10,7 @@
     <div class="image-list">
       <div *ngFor="let image of images; let i = index" (click)="changeSlide(i)"
           [ngClass]="{'active': i === currentIndex, 'inactive': i !== currentIndex}">
-        <img [src]="image.src" [alt]="image.alt" />
+        <img [src]="image.src" [alt]="image.alt" loading="lazy" />
         <div class="info">
           <p class="titulo">{{ image.titulo }}</p>
           <p class="subtitulo">{{ image.subtitulo }}</p>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AuthGoogleService } from '../../services/auth-google.service';
 import { Router } from '@angular/router';
 
@@ -9,36 +9,17 @@ import { Router } from '@angular/router';
 })
 export class DropdownMenuComponent {
 
+  @Input() menuItems: { label: string, action: () => void }[] = []; // Recibe el menú dinámico
   isMenuOpen: boolean = false;
-  constructor(private  authGoogleService: AuthGoogleService,private router:Router) { }
+
+  constructor(private authGoogleService: AuthGoogleService, private router: Router) { }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  // Ejemplo de navegación para las opciones
-  goToAccount() {
-    console.log('Mi cuenta');
-  }
-
-  goToOrders() {
-    console.log('Mis pedidos');
-  }
-
-  goToDownloads() {
-    console.log('Descargas');
-  }
-
-  goToSupport() {
-    console.log('Soporte');
-  }
-
-  goToHelp() {
-    console.log('Ayuda');
-  }
-
   logout() { 
     this.authGoogleService.logout();
     this.router.navigate(['/home']);
-  } 
+  }
 }

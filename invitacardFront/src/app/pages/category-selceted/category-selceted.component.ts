@@ -13,7 +13,7 @@ export class CategorySelcetedComponent {
 
   // Datos de ejemplo para diferentes categorías
   games = [
-    { title: 'Super Mario', image: '../../assets/categorias/juegos.jpeg', description: 'Descripción del Juego 1',price: '1000',rating: '4.5',downloads: '13450' },
+    { title: 'Super Mario', image: '../../assets/categorias/juegos.jpg', description: 'Descripción del Juego 1',price: '1000',rating: '4.5',downloads: '13450' },
     { title: 'Fortnite', image: '../../assets/categorias/juegos/fortnite.jpg', description: 'Descripción del Juego 2',price: '1000',rating: '4.5',downloads: '13450' },
     { title: 'Among Us', image: '../../assets/categorias/juegos/amongus.jpg', description: 'Descripción del Juego 3',price: '1000',rating: '4.5',downloads: '13450' },
     { title: 'Free Fire', image: '../../assets/categorias/juegos/freefire.jpg', description: 'Descripción del Juego 4',price: '1000',rating: '4.5',downloads: '13450' },
@@ -28,15 +28,15 @@ export class CategorySelcetedComponent {
 
   drawings = [
     { title: 'Paw patrol', image: '../../assets/categorias/dibujos/pawpatrol.jpg', description: 'Descripción del Dibujo 1',price: '1000',rating: '4.5',downloads: '13450'  },
-    { title: 'Peppa Pig', image: '../../assets/categorias/dibujos/pepa.jpg', description: 'Descripción del Dibujo 2' ,price: '1000',rating: '4.5',downloads: '13450'},
-    { title: 'La Granja de Zenon', image: '../../assets/categorias/dibujos/zenon.jpg', description: 'Descripción del Dibujo 3' ,price: '1000',rating: '4.5',downloads: '13450'},
-    { title: 'Mickey Mouse', image: '../../assets/categorias/dibujos/micky.jpg', description: 'Descripción del Dibujo 4' ,price: '1000',rating: '4.5',downloads: '13450'},
-    { title: 'Frozen', image: '../../assets/categorias/dibujos/frozen.jpg', description: 'Descripción del Dibujo 5',price: '1000',rating: '4.5',downloads: '13450' },
-    { title: 'Minions', image: '../../assets/categorias/dibujos/minions.jpg', description: 'Descripción del Dibujo 6' ,price: '1000',rating: '4.5',downloads: '13450'},
-    { title: 'Toy Story', image: '../../assets/categorias/dibujos/toystory.jpg', description: 'Descripción del Dibujo 7',price: '1000',rating: '4.5',downloads: '13450' },
-    { title: 'Bob Esponja', image: '../../assets/categorias/dibujos/bob.jpg', description: 'Descripción del Dibujo 8',price: '1000',rating: '4.5',downloads: '13450' },
-    { title: 'PJ Masks', image: '../../assets/categorias/dibujos/pjmask.jpg', description: 'Descripción del Dibujo 9' ,price: '1000',rating: '4.5',downloads: '13450'},
-    { title: 'Skibidi Toilet', image: '../../assets/categorias/dibujos/skibidi.jpg', description: 'Descripción del Dibujo 10',price: '1000',rating: '4.5',downloads: '13450' }
+    { title: 'Peppa Pig', image: '../../assets/categorias/dibujos/pepa.png', description: 'Descripción del Dibujo 2' ,price: '1000',rating: '4.5',downloads: '13450'},
+    { title: 'La Granja de Zenon', image: '../../assets/categorias/dibujos/zenon.png', description: 'Descripción del Dibujo 3' ,price: '1000',rating: '4.5',downloads: '13450'},
+    { title: 'Mickey Mouse', image: '../../assets/categorias/dibujos/micky.png', description: 'Descripción del Dibujo 4' ,price: '1000',rating: '4.5',downloads: '13450'},
+    { title: 'Frozen', image: '../../assets/categorias/dibujos/frozen.png', description: 'Descripción del Dibujo 5',price: '1000',rating: '4.5',downloads: '13450' },
+    { title: 'Minions', image: '../../assets/categorias/dibujos/minions.png', description: 'Descripción del Dibujo 6' ,price: '1000',rating: '4.5',downloads: '13450'},
+    { title: 'Toy Story', image: '../../assets/categorias/dibujos/toystory.png', description: 'Descripción del Dibujo 7',price: '1000',rating: '4.5',downloads: '13450' },
+    { title: 'Bob Esponja', image: '../../assets/categorias/dibujos/bob.png', description: 'Descripción del Dibujo 8',price: '1000',rating: '4.5',downloads: '13450' },
+    { title: 'PJ Masks', image: '../../assets/categorias/dibujos/pjmask.png', description: 'Descripción del Dibujo 9' ,price: '1000',rating: '4.5',downloads: '13450'},
+    { title: 'Skibidi Toilet', image: '../../assets/categorias/dibujos/skibidi.png', description: 'Descripción del Dibujo 10',price: '1000',rating: '4.5',downloads: '13450' }
   ];
   artists = [
     { title: 'Bad Bunny', image: '../../assets/categorias/artistas/badbunny.jpg', description: 'Descripción del Artista 1',price: '1000',rating: '4.5',downloads: '13450' },

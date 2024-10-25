@@ -1,6 +1,6 @@
 img {
     width: 100%;  /* Para que ocupen el 100% del contenedor */
-    height: 500px; /* Mantiene la proporción original de la imagen */
+    height: 400px; /* Mantiene la proporción original de la imagen */
     object-fit: fit; /* Asegura que la imagen se recorte si es necesario para llenar el espacio */
     border-radius: 10px; /* Bordes redondeados */
     padding: 5px; /* Espacio alrededor de la imagen */

@@ -8,20 +8,12 @@ import { Component } from '@angular/core';
 export class CarouselExpandingComponent {
   panels = [
     {
-      title: 'Explore the world',
+      title: 'Fornite',
       backgroundImage: "url('../../assets/invitaciones/juegos/invitacionfornite1.jpg')",
       active: true
     },
     {
-      title: 'Wild Forest',
-      backgroundImage: "url('../../assets/invitaciones/formales/invitacioncasamiento1.jpg')",      active: false
-    },
-    {
-      title: 'Sunny Beach',
-      backgroundImage: "url('../../assets/invitaciones/juegos/invitacionfornite2.jpg')",      active: false
-    },
-    {
-      title: 'City on Winter',
+      title: 'Graduacion',
       backgroundImage: "url('../../assets/invitaciones/formales/invitaciongraduacion1.jpg')",      active: false
     },
     {
@@ -36,13 +28,6 @@ export class CarouselExpandingComponent {
       title: 'City on Winter',
       backgroundImage: "url('../../assets/invitaciones/dibujos/invitacionrickymorty1.jpg')",      active: false
     },
-    {
-      title: 'City on Winter',
-      backgroundImage: "url('../../assets/invitaciones/dibujos/invitacionpepa1.jpg')",      active: false
-    },
-
-
-
   ];
 
   private currentIndex: number = 0;

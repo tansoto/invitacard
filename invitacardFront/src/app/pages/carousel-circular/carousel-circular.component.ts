@@ -45,13 +45,13 @@ export class CarouselCircularComponent implements OnInit {
 
   getProductsSmall(): Promise<Product[]> {
     const products: Product[] = [
-      { id: 1, name: 'Videojuegos', price: 1000, image: 'videojuegos2.png', inventoryStatus: 'INSTOCK' },
-      { id: 2, name: 'Artistas', price: 1100, image: 'artistas2.png', inventoryStatus: 'LOWSTOCK' },
-      { id: 3, name: 'Dibujos Animados', price: 1450, image: 'dibujosanimados2.png', inventoryStatus: 'OUTOFSTOCK' },
-      { id: 4, name: 'Tematicas', price: 2300, image: 'tematicas2.png', inventoryStatus: 'INSTOCK' },
-      { id: 5, name: 'Festividades', price: 1200, image: 'festividades2.png', inventoryStatus: 'OUTOFSTOCK' },
-      { id: 6, name: 'Peliculas', price: 1350, image: 'peliculas2.png', inventoryStatus: 'INSTOCK' },
-      { id: 7, name: 'Deportes', price: 1200, image: 'deportistas2.png', inventoryStatus: 'LOWSTOCK' }
+      { id: 1, name: 'Videojuegos', price: 1000, image: 'juegos.webp', inventoryStatus: 'INSTOCK' },
+      { id: 2, name: 'Artistas', price: 1100, image: 'artistas.webp', inventoryStatus: 'LOWSTOCK' },
+      { id: 3, name: 'Dibujos Animados', price: 1450, image: 'dibujos.webp', inventoryStatus: 'OUTOFSTOCK' },
+      { id: 4, name: 'Tematicas', price: 2300, image: 'tematicas.webp', inventoryStatus: 'INSTOCK' },
+      { id: 5, name: 'Festividades', price: 1200, image: 'festividades.webp', inventoryStatus: 'OUTOFSTOCK' },
+      { id: 6, name: 'Peliculas', price: 1350, image: 'peliculas.webp', inventoryStatus: 'INSTOCK' },
+      { id: 7, name: 'Deportes', price: 1200, image: 'deportistas.webp', inventoryStatus: 'LOWSTOCK' }
     ];
     return new Promise((resolve) => {
       setTimeout(() => {

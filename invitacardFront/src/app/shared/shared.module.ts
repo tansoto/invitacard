@@ -12,6 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FeaturesCardComponent } from './features-card/features-card.component';
 import { CarrouselComponent } from './carrousel/carrousel.component';
@@ -19,6 +20,9 @@ import { ContactWspComponent } from './contact-wsp/contact-wsp.component';
 import { HeaderMainComponent } from './header-main/header-main.component';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
 import { InfiniteCarouselComponent } from './infinite-carousel/infinite-carousel.component';
+import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
+import { MenubarModule } from 'primeng/menubar';
 
 @NgModule({
   declarations: [
@@ -43,6 +47,11 @@ import { InfiniteCarouselComponent } from './infinite-carousel/infinite-carousel
     MatButtonModule,
     MatCardModule,
     MatExpansionModule,
+    MatSidenavModule,
+    ButtonModule,
+    RippleModule,
+    MenubarModule
+
   ],
   exports:[
     HeaderHomeComponent,
@@ -55,7 +64,7 @@ import { InfiniteCarouselComponent } from './infinite-carousel/infinite-carousel
     ContactWspComponent,
     HeaderMainComponent,
     DropdownMenuComponent,
-    InfiniteCarouselComponent
+    InfiniteCarouselComponent,
   ]
 })
 export class SharedModule { }

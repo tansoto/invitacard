@@ -16,17 +16,23 @@
 .container {
     display: flex;
     width: 90vw;
+    border: solid 1px rgba(12, 6, 6, 0.2);
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 20px;
+    transition: all 700ms ease-in;
 }
 
+/* Paneles en pantallas grandes */
 .panel {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 80vh;
-    border-radius: 50px;
+    border-radius: 30px;
     color: #fff;
     cursor: pointer;
-    flex: 0.1;
+    flex: 0.3;
     margin: 10px;
     position: relative;
     transition: all 700ms ease-in;
@@ -53,22 +59,28 @@
 }
 
 .panel.active {
-    flex: 0.265 ;/* las propiedades de flex son para que se expanda el panel la primera es para que se expanda en el eje x y la segunda en el eje y */
+    flex: 0.5; /* Expande el panel al hacer clic */
 }
-
 
 .panel.active h3 {
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
 }
 
+/* Paneles en pantallas pequeñas (celulares) */
 @media (max-width: 480px) {
-    .container {
-        width: 100vw;
-    }
 
-    .panel:nth-of-type(4),
-    .panel:nth-of-type(5) {
-        display: none;
+    .container {
+        flex-direction: column; /* Apila los paneles verticalmente */
+        height: 900px;
+    }
+    .panel {
+        flex: 1;
+        height: 10vh; /* Ajusta la altura de los paneles en pantallas pequeñas */
+        margin: 5px 0; /* Ajusta el margen para que se vea mejor verticalmente */
+    }
+    .panel.active {
+        flex: 10; /* Expande el panel al hacer clic */
+        height: 700vh; /* Expande el panel verticalmente en pantallas pequeñas */
     }
 }

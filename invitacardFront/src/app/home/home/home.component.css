@@ -5,36 +5,27 @@
     /* flex-direction: column; */
     box-sizing: border-box;
 }
-
 .titulo {
     display: grid;
     justify-content: center;
     align-content: center;
     width: 50%;
 }
-
-mat-card-title {
+.titulo mat-card-title {
     padding-left: 20%;
     padding-bottom: 2%;
     font-size: 40px;
     font-weight: bold;
     color: #00a39b;
 }
-
 mat-card-subtitle {
     padding-left: 20%;
     font-size: 20px;
     font-weight: bold;
 }
 .img-brillante {
-
-    filter: drop-shadow(0 0 15px rgba(0, 225, 255, 0.377)); /* Efecto de sombra */
+    filter: drop-shadow(0 0 15px rgba(0, 225, 255, 0.377));
 }
-.img-brillante:hover {
-    filter: drop-shadow(0 0 20px rgba(202, 188, 0, 0.644)); /* Efecto de sombra al pasar el mouse */
-    
-}
-
 .button-crear {
     margin-top: 2%;
     margin-left: 20% !important;
@@ -45,70 +36,58 @@ mat-card-subtitle {
     color: white !important;
     
 }
-
 .img-home {
     width: 50%;
     margin: 0;
 }
-
 img {
     width: 75%;
 }
 .container-principal {
     height: 60%;
-    display: flex; /* Usar flexbox para alinear elementos horizontalmente */
-    justify-content: space-between; /* Espacio entre los elementos */
+    display: flex;
+    justify-content: space-between;
     align-items: center; /* Centrar verticalmente */
-    margin: 0px; /* Espacio inferior entre la clase principal y la clase check-card */
+    margin: 0px;
 }
-
-
 /* hasta aqui estan las clases de la pagina principal */
 /* desde aqui estan las clases de la pagina de plantillas */
-.segundo-scroll{
-    display: flex;
-    flex-direction: column;
-}
-.container-scroll-header{
-    display: flex;
-    width: 100%;
-}
 .titulo-scroll{
-    width: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     padding-top: 2%;
+    font-size: 40px;
+    font-weight: bold;
+    color: #00a39b;
 }
 .descripcion-scroll{
     padding-top: 1%;
 }
 .button-container {
-    display: flex;               /* Utiliza flexbox para alinear los botones */
+    display: flex;
     justify-content: center;     /* Centra los botones horizontalmente */
     align-items: center;         /* Centra los botones verticalmente */
-    gap: 20px;                   /* Espacio entre los botones */
-    margin-top: 20px;           /* Espacio superior para alejar los botones del contenido anterior */
 }
-
 .button-crear2,
 .button-ver-plantillas {
-    background-color: #1A5276;  /* Color de fondo */
-    color: rgb(255, 255, 255) !important;                /* Color del texto */
-    border-radius: 15px;         /* Bordes redondeados */
-    padding: 10px 20px;          /* Espaciado interno */
-    text-align: center;          /* Centra el texto dentro del botón */
+    background-color: #1A5276;
+    color: rgb(255, 255, 255) !important;
+    border-radius: 15px;
+    padding: 10px 20px;
+    text-align: center;
     text-decoration: none;       /* Elimina subrayado del texto */
-    font-weight: bold;           /* Negrita */
+    font-weight: bold;
     transition: background-color 0.3s ease; /* Efecto de transición suave */
 }
-
 .button-crear2:hover,
 .button-ver-plantillas:hover {
-    background-color: #06d4f0;   /* Color de fondo al pasar el mouse */
-    cursor: pointer;             /* Cambia el cursor al pasar el mouse */
+    background-color: #06d4f0;
+    cursor: pointer;
 }
-
 .button-crear2 mat-icon,
 .button-ver-plantillas mat-icon {
-    margin-right: 8px;          /* Espacio entre el ícono y el texto */
+    margin-right: 8px;
 }
 /* hasta aqui estan las clases de la pagina de plantillas */
 /* desde aqui estan las clases de la pagina de diseño  o tercer scroll*/
@@ -116,35 +95,63 @@ img {
 .button-personaliza,
 .button-comparte,
 .button-descarga {
-    background-color: #5db1b4;     /* Color de fondo */
-    color: white !important;                   /* Color del texto */
-    border-radius: 15px;            /* Bordes redondeados */
-    padding: 10px 20px;             /* Espaciado interno */
-    text-align: center;             /* Centra el texto dentro del botón */
-    text-decoration: none;          /* Elimina subrayado del texto */             /* Negrita */
+    background-color: #5db1b4;
+    color: white !important;
+    border-radius: 15px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
     transition: background-color 0.3s ease; /* Efecto de transición suave */
 }
-
 .button-diseño:hover,
 .button-personaliza:hover,
 .button-comparte:hover,
 .button-descarga:hover {
-    background-color: #06d4f0;      /* Color de fondo al pasar el mouse */
-    cursor: pointer;                /* Cambia el cursor al pasar el mouse */
+    background-color: #06d4f0;
+    cursor: pointer;
 }
-
 .arrow-explicacion {
-    font-size: 24px;                /* Tamaño de la flecha */
-    line-height: 1;                 /* Ajusta la altura de la línea */
-    padding: 0 10px;                /* Espacio alrededor de la flecha */
+    font-size: 24px;
+    line-height: 1;
+    padding: 0 10px;
 }
 
 /* hasta aqui estan las clases de la pagina de diseño  o tercer scroll*/
 
 @media (max-width: 600px) {
     .boton-menu {
-        /* esconder texto */
         display: none;
+    }
+    a{
+        font-size: 10px;
+    }
+    .titulo mat-card-title {
+        padding: 20px 10px 0px 10px;
+        width: 400px;
+        padding-bottom: 2%;
+        font-size: 30px;
+        font-weight: bold;
+        color: #00a39b;
+    }
+    mat-card-subtitle {
+        padding-left: 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .button-crear{
+        margin-top: 2%;
+        margin-left: 10px !important;
+        border: 2px solid #009fc7 !important;
+        border-radius: 15px !important;
+        background-color: rgba(0, 148, 168, 0.747) !important;
+        width: 40%;
+        color: white !important;
+    }
+    .container-principal{
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
